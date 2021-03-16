@@ -29,5 +29,38 @@ public class BoardMapperTests {
 		});
 		
 	}
+	
+//	@Test
+	public void testInsert() {
+		
+		BoardVO board = new BoardVO();
+		
+		board.setTitle("다섯번째 제목");
+		board.setContent("다섯번째 내용");
+		board.setWriter("김윤흠");
+		
+		mapper.insert(board);
+	}
+	
+//	@Test
+	public void testRead() {
+		mapper.read(4L);
+	}
+	
+//	@Test
+	public void testUpdate() {
+		BoardVO board = new BoardVO();
+		
+		board.setTitle("수정된 제목");
+		board.setContent("수정된 내용");
+		board.setBno(1L);
+		
+		mapper.update(board);
+	}
+	
+//	@Test
+	public void testDelete() {
+		mapper.delete(4L);
+	}
 
 }
